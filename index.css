@@ -1,0 +1,114 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *::after, *::before {
+    box-sizing: inherit;
+  }
+  html, body {
+    height: 100%;
+    margin: 0; /* remove default browser margin too */
+  }
+  .title{
+   font-weight: 500;
+  }
+  .todo-app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #e8e7e3;
+   
+  }
+  .todo-container{
+    width: 75%;
+    height: 90%;
+    
+    background: #ffffff;
+    border-radius: .3rem;
+  }
+  .row-1 > .form-control {
+    width: 100%;
+    max-width: 20rem;
+    box-sizing: border-box; /* so padding doesn't break the width */
+    text-align: center;
+  }
+
+  .btn-save{
+    background-color: #4361ee;
+    padding: 0 1rem;
+    margin-left: 2rem;
+    font-weight: 500;
+    color:#e8e7e3
+}
+
+.btn-save:hover{
+    background-color: #4361ee;
+    color: #000000;
+}
+
+.btn-gettasks{
+    background-color: #e8a33d;
+    padding: 0 1.5rem;
+    margin-left: 2rem;
+    font-weight: 500;
+    color:#e8e7e3
+  }
+
+  .btn-gettasks:hover{
+    background-color: #e8a33d;
+    color: #000000;
+  }
+/* todo list style */
+  .list-todo-heading{
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1.8rem;
+    width: 100%;
+  }
+  .todo-no{
+    padding-left: 4rem;
+    width: 15%;
+   
+  }
+  .todo-item{
+    padding-right: 13rem;
+    margin-left: -2rem;
+    width: 40%;
+  }
+  .todo-status{
+    padding-right: 5rem;
+    margin-left: -2rem;
+    width: 15%;
+  }
+  .todo-actions{
+    padding-right: 13rem;
+    margin-left: -4rem;
+    width: 30%;
+  }
+  /* todo list data style */
+  .list-todo-data{
+    width: 100%;
+  }
+   .todo-no-data{
+    width: 15%;
+    text-align: center;
+    font-weight: 500;
+  }
+  .todo-item-data{
+    width: 40%;
+    font-weight: 500;
+  }
+  .todo-status-data{
+    width: 15%;
+    text-align: center;
+    margin-left: -2rem;
+    font-weight: 500;
+  }
+  .todo-actions-data{
+    width: 30%;
+    padding-left: 1.6rem;
+    font-weight: 500;
+  } 
+ 
