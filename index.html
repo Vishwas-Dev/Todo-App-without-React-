@@ -13,13 +13,10 @@
     <title>Todo-App</title>
   </head>
   <body>
-
     <!-- Todo-app starts from here -->
     <div class="todo-app">
-
       <!-- todo-card -->
       <div class="todo-container">
-
         <!-- todo heading -->
         <header>
           <div class="title text-center pt-4">
@@ -29,33 +26,38 @@
 
         <!-- todo 1st row(inputs and btns) -->
         <div class="row-1 d-flex flex-row pt-4 justify-content-center">
-          
-            <input type="text" class="form-control" placeholder="Enter a task here">
-            <button class="btn-save btn btn-primary" type="submit">SAVE</button>
-            <button class="btn-gettasks btn btn-warning" type="submit">GET TASKS</button>
-            
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter a task here" />
+          <button class="btn-save btn btn-primary" type="submit">SAVE</button>
+          <button class="btn-gettasks btn btn-warning" type="submit">
+            GET TASKS
+          </button>
         </div>
 
         <!-- todo-data -->
-        <div class="row-2">
+        <div class="row-2" id="todo-data">
           <div class="list-todo-heading d-flex justify-content-between">
             <div class="todo-no">No.</div>
             <div class="todo-item">Todo Item</div>
             <div class="todo-status">Status</div>
             <div class="todo-actions">Actions</div>
           </div>
-          <hr>
-          <div class="list-todo-data d-flex ">
-            <div class="todo-no-data">1</div>
-            <div class="todo-item-data">today i will open books</div>
-            <div class="todo-status-data">in Progress...</div>
-            <div class="todo-actions-data">
-              <button  class="btn btn-danger fw-medium">Delete</button>
-              <button class="btn btn-success fw-medium">Finished</button>
+          <hr />
+          <div id="row-data">
+            <div class="list-todo-data d-flex">
+              <div class="todo-no-data">1</div>
+              <div class="todo-item-data">today i will open books</div>
+              <div class="todo-status-data">in Progress...</div>
+              <div class="todo-actions-data">
+                <button class="btn btn-danger fw-medium">Delete</button>
+                <button class="btn btn-success fw-medium">Finished</button>
+              </div>
             </div>
           </div>
-          <hr>
-          <div class="list-todo-data d-flex ">
+          <hr />
+          <!-- <div class="list-todo-data d-flex ">
             <div class="todo-no-data">2</div>
             <div class="todo-item-data">will play video games for 2 hours</div>
             <div class="todo-status-data">Completed</div>
@@ -74,8 +76,7 @@
               <button class="btn btn-success fw-medium">Finished</button>
             </div>
           </div>
-          <hr>
-          
+          <hr> -->
         </div>
       </div>
     </div>
