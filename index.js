@@ -11,9 +11,21 @@ let DeleteButtom = document.createElement("button");
 let FinishedButton = document.createElement("button");
 let hrTag = document.createElement("hr");
 
+    // adding classes 
+    todoItem.classList.add("list-todo-data", "d-flex" );
+    todoNumber.classList.add("todo-no-data");
+    todoDetails.classList.add("todo-detail-data");
+    todoStatus.classList.add("todo-status-data");
+    todoActions.classList.add("todo-actions-data");
+    DeleteButtom.classList.add("btn", "btn-danger", "fw-medium");
+    FinishedButton.classList.add("btn", "btn-success", "fw-medium");
+   
+
+// ----------------------------------------------------------
+    // conent 
     todoNumber.textContent = "1";
-    todoDetails.textContent = todoData;
-    todoStatus.textContent = "in progess";
+    todoDetails.textContent = todoData;     //sets todo text sent from input field
+    todoStatus.textContent = "in Progress..";
     DeleteButtom.textContent = "Delete";
     FinishedButton.textContent = "Finished";
 
