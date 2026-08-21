@@ -29,8 +29,9 @@
           <input
             type="text"
             class="form-control"
+            id="todo-input-bar"
             placeholder="Enter a task here" />
-          <button class="btn-save btn btn-primary" type="submit">SAVE</button>
+          <button class="btn-save btn btn-primary disabled" id="saveBtn" type="submit">SAVE</button>
           <button class="btn-gettasks btn btn-warning" type="submit">
             GET TASKS
           </button>
@@ -50,8 +51,8 @@
               <div class="todo-no-data">1</div>
               <div class="todo-detail-data">today i will open books</div>
               <div class="todo-status-data">in Progress...</div>
-              <div class="todo-actions-data">
-                <button class="btn btn-danger fw-medium">Delete</button>
+              <div class="todo-actions-data d-flex">
+                <button class="btn btn-danger fw-medium mx-2">Delete</button>
                 <button class="btn btn-success fw-medium">Finished</button>
               </div>
             </div>
