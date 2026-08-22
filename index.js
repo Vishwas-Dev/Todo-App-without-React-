@@ -2,6 +2,7 @@ console.log("welcome to Todos");
 let getTodoSection = document.getElementById("todo-data");
 let saveButton = document.getElementById("saveBtn");
 let todoInputBar = document.getElementById("todo-input-bar");
+let todos = [];
 
 todoInputBar.addEventListener('keyup', function toggleSaveButton(){
     let todoText = todoInputBar.value;
@@ -19,13 +20,14 @@ todoInputBar.addEventListener('keyup', function toggleSaveButton(){
 saveButton.addEventListener('click', function getTextAndAddTodo(){
     let todoText = todoInputBar.value;
     if(todoText.length == 0) return;
-    addTodo(todoText);
+    todos.push(todoText);
+    addTodo(todoText, todos.length );
     todoInputBar.value = '';
 })
 
 
 
-function addTodo(todoData){
+function addTodo(todoData, todoCount){
 let rowData = document.createElement("div");
 let todoItem = document.createElement("div");
 let todoNumber = document.createElement("div");
@@ -48,7 +50,7 @@ let hrTag = document.createElement("hr");
 
 // ----------------------------------------------------------
     // conent 
-    todoNumber.textContent = "1";
+    todoNumber.textContent = `${todoCount}`;
     todoDetails.textContent = todoData;     //sets todo text sent from input field
     todoStatus.textContent = "in Progress...";
     DeleteButtom.textContent = "Delete";
