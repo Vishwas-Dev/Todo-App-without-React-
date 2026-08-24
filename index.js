@@ -4,6 +4,8 @@ let saveButton = document.getElementById("saveBtn");
 let todoInputBar = document.getElementById("todo-input-bar");
 let todos = [];
 
+
+//  this fun is for save button if txt == 0 then disabled or >= 0 then enabled
 todoInputBar.addEventListener('keyup', function toggleSaveButton(){
     let todoText = todoInputBar.value;
     if(todoText.length == 0){
@@ -17,16 +19,20 @@ todoInputBar.addEventListener('keyup', function toggleSaveButton(){
 
 })
 
+//  this fun is for if there is txt then add todo
 saveButton.addEventListener('click', function getTextAndAddTodo(){
     let todoText = todoInputBar.value;
     if(todoText.length == 0) return;
-    todos.push(todoText);
+    todos.push(todoText);  // adding todos in an arr
     addTodo(todoText, todos.length );
-    todoInputBar.value = '';
+    todoInputBar.value = ''; // to make bar empty after adding todo
 })
 
+    function removeTodo(){
+        console.log("clicked");
+    }
 
-
+//  adding todo
 function addTodo(todoData, todoCount){
 let rowData = document.createElement("div");
 let todoItem = document.createElement("div");
@@ -44,9 +50,10 @@ let hrTag = document.createElement("hr");
     todoDetails.classList.add("todo-detail-data");
     todoStatus.classList.add("todo-status-data"); 
     todoActions.classList.add("todo-actions-data", "d-flex");
-    DeleteButtom.classList.add("btn", "btn-danger", "fw-medium", "mx-2");   // button space dena h kal jab ayega 21 ko
-    FinishedButton.classList.add("btn", "btn-success", "fw-medium");
+    DeleteButtom.classList.add("btn", "btn-danger", "fw-medium", "mx-2", "delete-todo");   // button space dena h kal jab ayega 21 ko
+    FinishedButton.classList.add("btn", "btn-success", "fw-medium", "finish-todo");
    
+    DeleteButtom.onclick = removeTodo;
 
 // ----------------------------------------------------------
     // conent 
