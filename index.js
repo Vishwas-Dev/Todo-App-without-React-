@@ -79,7 +79,7 @@ let hrTag = document.createElement("hr");
 }
 
 
-
+console.log("test");
 
 
 // let getTodo = document.querySelector(".btn-gettasks");
